@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #263238;
+    background: #f5f7fa;
+}
+
+/* Header using Flexbox */
+.header {
+    background: #172554;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    color: #93c5fd;
+}
+
+/* Hero section */
+.hero {
+    min-height: 380px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.btn {
+    margin-top: 22px;
+    padding: 12px 25px;
+    background: white;
+    color: #2563eb;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Services section */
+.services, .gallery, .contact {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.services h2, .gallery h2, .contact h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    flex: 1 1 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+/* Gallery using CSS Grid */
+.gallery {
+    background: #e8eef8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    min-height: 150px;
+    background: linear-gradient(135deg, #0f766e, #2563eb);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Contact and footer */
+.contact {
+    background: white;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tablet and mobile responsive design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header nav {
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header nav {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .services, .gallery, .contact {
+        padding: 35px 5%;
+    }
+}
